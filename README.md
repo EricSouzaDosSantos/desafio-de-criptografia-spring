@@ -15,17 +15,45 @@ Esta API foi desenvolvida como parte de um desafio técnico e tem como objetivo 
 ### **Gerenciamento de Dados Sensíveis**
 **Endpoint principal:** `/data`
 
-| **Método** | **Endpoint**                 | **Descrição**                                 | **Corpo da Requisição**                             |
-|------------|-------------------------------|-----------------------------------------------|-----------------------------------------------------|
-| **POST**   | `/save`                      | Salva dados sensíveis criptografados.         | `{ "userDocument": "...", "creditCardToken": "...", "value": ... }` |
-| **GET**    | `/get`                       | Retorna todos os dados sensíveis (criptografados). | -                                                   |
-| **GET**    | `/get/decripted/{id}`        | Retorna dados descriptografados por ID.       | -                                                   |
-| **GET**    | `/get/encrypted/{id}`        | Retorna dados criptografados por ID.          | -                                                   |
-| **PUT**    | `/update/{id}`               | Atualiza dados sensíveis por ID.              | `{ "userDocument": "...", "creditCardToken": "...", "value": ... }` |
-| **DELETE** | `/delete/{id}`               | Deleta dados sensíveis por ID.                | -                                                   |
+| **Método** | **Endpoint**                 | **Descrição**                                  | **Corpo da Requisição**                             | **Testando Enpoints**                                           |
+|------------|-------------------------------|------------------------------------------------|-----------------------------------------------------|-----------------------------------------------------------------|
+| **POST**   | `/save`                      | Salva dados sensíveis criptografados.          | `{ "userDocument": "...", "creditCardToken": "...", "value": ... }` | ![POST Save Request](src/main/resources/img/POST.png)                   |
+| **GET**    | `/get`                       | Retorna todos sensitiveData (criptografados). | -                                                   | ![GET All Request](src/main/resources/img/GET-ALL.png)              |
+| **GET**    | `/get/decripted/{id}`        | Retorna dados descriptografados por ID.        | -                                                   | ![GET Decrypted Request](src/main/resources/img/GET-DECRIPTED.png)  |
+| **GET**    | `/get/encrypted/{id}`        | Retorna dados criptografados por ID.           | -                                                   | ![GET Encrypted Request](src/main/resources/img/GET-ENCRYPTED.png)|
+| **PUT**    | `/update/{id}`               | Atualiza sensitiveData por ID.                 | `{ "userDocument": "...", "creditCardToken": "...", "value": ... }` | ![PUT Update Request](src/main/resources/img/PUT.png)                   |
+| **DELETE** | `/delete/{id}`               | Deleta sensitiveData por ID.                 | -                                                   | ![DELETE Request](src/main/resources/img/DELETE.png)             |
 
 ## Criptografia AES
 O projeto utiliza o algoritmo AES (Advanced Encryption Standard) para garantir a segurança das informações sensíveis armazenadas no banco de dados.
+
+### **Testando os Endpoints com Postman**
+
+#### **POST /save**
+Teste de criação de dados sensíveis criptografados:
+![POST Save Request](src/main/resources/img/POST.png)
+
+#### **GET /get**
+Retorno de todos os dados sensíveis criptografados:
+![GET All Request](src/main/resources/img/GET-ALL.png)
+
+#### **GET /get/decrypted/{id}**
+Retorno de dados descriptografados por ID:
+![GET Decrypted Request](src/main/resources/img/GET-DECRIPTED.png)
+
+#### **GET /get/encrypted/{id}**
+Retorno de dados criptografados por ID:
+![GET Encrypted Request](src/main/resources/img/GET-ENCRYPTED.png)
+
+#### **PUT /update/{id}**
+Atualização de dados sensíveis:
+![PUT Update Request](src/main/resources/img/PUT.png)
+
+#### **DELETE /delete/{id}**
+Deletação de dados sensíveis por ID:
+![DELETE Request](src/main/resources/img/DELETE.png)
+
+---
 
 ## **Configuração e Execução**
 
