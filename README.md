@@ -29,27 +29,27 @@ O projeto utiliza o algoritmo AES (Advanced Encryption Standard) para garantir a
 
 ### **Testando os Endpoints com Postman**
 
-#### **POST /save**
+#### **POST /data/save**
 Teste de criação de dados sensíveis criptografados:
 ![POST Save Request](src/main/resources/img/POST.png)
 
-#### **GET /get**
+#### **GET /data/get**
 Retorno de todos os dados sensíveis criptografados:
 ![GET All Request](src/main/resources/img/GET-ALL.png)
 
-#### **GET /get/decrypted/{id}**
+#### **GET /data/get/decripted/{id}**
 Retorno de dados descriptografados por ID:
 ![GET Decrypted Request](src/main/resources/img/GET-DECRIPTED.png)
 
-#### **GET /get/encrypted/{id}**
+#### **GET /data/get/encrypted/{id}**
 Retorno de dados criptografados por ID:
 ![GET Encrypted Request](src/main/resources/img/GET-ENCRYPTED.png)
 
-#### **PUT /update/{id}**
+#### **PUT /data/update/{id}**
 Atualização de dados sensíveis:
 ![PUT Update Request](src/main/resources/img/PUT.png)
 
-#### **DELETE /delete/{id}**
+#### **DELETE /data/delete/{id}**
 Deletação de dados sensíveis por ID:
 ![DELETE Request](src/main/resources/img/DELETE.png)
 
